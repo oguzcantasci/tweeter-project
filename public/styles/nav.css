@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+#tweeter-main {
+  font-family: 'Bungee', sans-serif;
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+
+ }
+
+ #tweeter-write {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+ }
+
+ #tweeter-write > i {
+  color:red
+ }
