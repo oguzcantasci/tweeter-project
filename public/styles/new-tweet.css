@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 0px 1rem;
 }
 
 .new-tweet div {
@@ -18,6 +19,7 @@
 .new-tweet > form > label {
   flex-grow: 1;
   align-self: flex-start;
+  font-weight: bold;
 }
 
 #tweet-text {
@@ -26,10 +28,22 @@
   border-bottom: 2px solid black;
   /* padding-bottom: 2%; */
   resize: none;
+  font-size: medium; 
 }
 
 #tweet-text:focus {
   outline: none;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+  color: #545149;
+}
+
+.tweet-btn {
+  font-family: 'Bungee', sans-serif;
+  background-color: #4056A1;
+  color: #FFFFFF;
 }
 
 .counter.exceed {
