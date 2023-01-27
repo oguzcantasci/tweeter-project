@@ -1,0 +1,39 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.new-tweet > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet > form > label {
+  flex-grow: 1;
+  align-self: flex-start;
+}
+
+#tweet-text {
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 2px solid black;
+  /* padding-bottom: 2%; */
+  resize: none;
+}
+
+#tweet-text:focus {
+  outline: none;
+}
+
+.counter.exceed {
+  color: red;
+}
+
+
