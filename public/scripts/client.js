@@ -8,7 +8,7 @@
 
 
 
-$(document).ready(function() {
+$(function() {
 
   const createTweetElement = function(tweet) {
 
@@ -48,6 +48,14 @@ $(document).ready(function() {
 
   $(".new-tweet form").on("submit", function(event) {
     event.preventDefault();
+    if (!$("#tweet-text").val().trim()) {
+      alert("Empty tweet is a bad tweet");
+      return;
+    }
+    if ($("#tweet-text").val().length > 140) {
+      alert("You exceeded the 140 characters limit for a tweet");
+      return;
+    }
     const formData = $(this).serialize();
     $.post("/tweets", formData);
   });
