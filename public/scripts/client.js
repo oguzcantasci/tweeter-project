@@ -10,17 +10,23 @@
 
 $(function() {
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
 
     const $tweet = $(`<article class="tweet">
     <header>
       <div>
         <span><img alt='profilep-pic' src ="https://i.imgur.com/73hZDYK.png"/></span>
-        <span>${tweet.user.name}</span>
+        <span>${escape(tweet.user.name)}</span>
       </div>
-        <span class="username">${tweet.user.handle}</span>
+        <span class="username">${escape(tweet.user.handle)}</span>
     </header>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <footer>
       <span>${timeago.format(tweet.created_at)}</span>
       <div>
