@@ -34,6 +34,8 @@ $(function() {
   };
 
   const renderTweets = function(tweetArray) {
+    tweetArray.reverse();
+    $('#tweets-container').empty();
     for (let tw of tweetArray) {
       const tweet = createTweetElement(tw);
       $('#tweets-container').append(tweet);
@@ -45,6 +47,8 @@ $(function() {
       renderTweets(tweets);
     });
   };
+  
+  loadTweets();
 
   $(".new-tweet form").on("submit", function(event) {
     event.preventDefault();
@@ -57,10 +61,8 @@ $(function() {
       return;
     }
     const formData = $(this).serialize();
-    $.post("/tweets", formData);
+    $.post("/tweets", formData, function() {
+      loadTweets();
+    });
   });
-
-
-  
-  loadTweets();
 });
