@@ -26,7 +26,8 @@ $(document).ready(function() {
       "user": {
         "name": "Descartes",
         "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
+        "handle": "@rd"
+      },
       "content": {
         "text": "Je pense , donc je suis"
       },
@@ -64,5 +65,12 @@ $(document).ready(function() {
     }
   };
 
+  $(".new-tweet form").on("submit", function(event) {
+    event.preventDefault();
+    const formData = $(this).serialize();
+    $.post("/tweets", formData);
+  });
+
+  
   renderTweets(data);
 });
