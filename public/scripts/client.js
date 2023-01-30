@@ -63,6 +63,7 @@ $(function() {
     const formData = $(this).serialize();
     $.post("/tweets", formData, function() {
       loadTweets();
+      $("#tweet-text").val("");
     });
   });
 });
