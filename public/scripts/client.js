@@ -53,23 +53,30 @@ $(function() {
       renderTweets(tweets);
     });
   };
+
+  $(".error-container").hide();
   
   loadTweets();
 
   $(".new-tweet form").on("submit", function(event) {
     event.preventDefault();
     if (!$("#tweet-text").val().trim()) {
-      alert("Empty tweet is a bad tweet");
+      $(".error-text").text("Empty tweet is a bad tweet");
+      $(".error-container").slideDown("slow");
       return;
     }
     if ($("#tweet-text").val().length > 140) {
-      alert("You exceeded the 140 characters limit for a tweet");
+      $(".error-text").text("You have exceeded the chracater limit. Type less FFS!");
+      $(".error-container").slideDown("slow");
       return;
     }
     const formData = $(this).serialize();
     $.post("/tweets", formData, function() {
       loadTweets();
       $("#tweet-text").val("");
+      $(".counter").text(140);
+      $(".error-text").text("");
+      $(".error-container").slideUp();
     });
   });
 });
