@@ -63,13 +63,17 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
+      <div class="error-container">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p class="error-text"></p>
+      </div>
       <form>
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <div>
+        <footer>
           <button class= "tweet-btn" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
+        </footer>
       </form>
     </section>
 
