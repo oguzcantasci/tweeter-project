@@ -5,10 +5,14 @@
   padding: 0px 1rem;
 }
 
-.new-tweet div {
+.new-tweet footer {
   display: flex;
   justify-content: space-between;
   margin-top: 1em;
+}
+
+.new-tweet h2 {
+  margin-bottom: 8px;
 }
 
 .new-tweet > form {
@@ -20,6 +24,7 @@
   flex-grow: 1;
   align-self: flex-start;
   font-weight: bold;
+  margin-top: 2em;
 }
 
 #tweet-text {
@@ -48,6 +53,21 @@
 
 .counter.exceed {
   color: red;
+}
+
+.error-container {
+  border: 4px solid #ff0000;
+  color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+  width: max-content;
+}
+
+.error-text {
+  margin: 6px;
 }
 
 
