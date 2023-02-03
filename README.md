@@ -24,7 +24,7 @@ To use the app, install the necessary dependencies, start the web server, and vi
 
 !["Write a tweet and show it on time line"](https://github.com/oguzcantasci/tweeter-project/blob/master/docs/newtweet.gif?raw=true)
 
-- Tweeter is responsive! Layout will automatically adjust to fit the width of the device. with the layout adjusting to fit different devices. Devices with larger(than 1024px) screens will have a two-column layout whereas devices with smaller screens will have single columnd layout where the sections are stacked; profile on top, tweets below.
+- Tweeter is responsive! Layout will automatically adjust to fit the width of the device. Devices with larger(than 1024px) screens will have a two-column layout whereas devices with smaller screens will have single columnd layout where the sections are stacked; profile on top, tweets below.
 
 !["Show responsiveness"](https://github.com/oguzcantasci/tweeter-project/blob/master/docs/responsive.gif?raw=true)
 
