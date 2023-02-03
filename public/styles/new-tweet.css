@@ -1,6 +1,6 @@
 .new-tweet {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0px 1rem;
 }
 
@@ -20,6 +20,11 @@
   flex-grow: 1;
   align-self: flex-start;
   font-weight: bold;
+}
+
+.new-tweet h2 {
+  margin-top: 0px;
+  margin-bottom: 1em;
 }
 
 #tweet-text {
@@ -58,11 +63,19 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 1rem;
-  width: max-content;
+  width: 100%;
+  margin-bottom: 1em;
+
 }
 
 .error-text {
   margin: 6px;
+}
+
+@media (max-width: 1023px) {
+  .new-tweet {
+    flex-direction: column;
+  }
 }
 
 
