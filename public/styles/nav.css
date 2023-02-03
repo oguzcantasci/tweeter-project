@@ -5,14 +5,15 @@ nav {
   align-items: center;
   height: 120px;
   width: 100vw;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #4056A1;
   color: #FFFFFF;
+  padding: 0 1.5em;
 }
 
 #tweeter-main {
   font-family: 'Bungee', sans-serif;
   margin-left: 1.5em;
-  margin-bottom: 0.5em;
 
  }
 
@@ -21,9 +22,15 @@ nav {
   flex-direction: column;
   align-items: center;
   margin-right: 1.5em;
-  margin-bottom: 0.5em;
  }
 
  #tweeter-write > i {
   color:red
+ }
+
+ @media (max-width: 1023px) { 
+  nav {
+    background-color: #570a5b;
+    background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");;
+  }
  }

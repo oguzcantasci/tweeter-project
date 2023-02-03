@@ -1,7 +1,6 @@
 .new-tweet {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
   padding: 0px 1rem;
 }
 
@@ -11,20 +10,16 @@
   margin-top: 1em;
 }
 
-.new-tweet h2 {
-  margin-bottom: 8px;
-}
-
 .new-tweet > form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .new-tweet > form > label {
   flex-grow: 1;
   align-self: flex-start;
   font-weight: bold;
-  margin-top: 2em;
 }
 
 #tweet-text {
